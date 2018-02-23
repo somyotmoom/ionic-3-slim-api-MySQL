@@ -48,7 +48,7 @@ export class EditPage {
             buttons: ['Ok']
           });
           alert.present()
-          this.navCtrl.setRoot(UserPage); // กลับหน้าสมาชิกทั้งหมด
+          this.navCtrl.push(UserPage); // กลับหน้าสมาชิกทั้งหมด
   
       }, (err) => {
       });
