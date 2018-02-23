@@ -1,0 +1,25 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>แก้ไขข้อมูล</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  user_id : {{userPostData.user_id}}
+  <ion-list>
+      <ion-item>
+        <ion-label stacked>ชื่อ-สกุล</ion-label>
+        <ion-input type="text" [(ngModel)]="userData.name"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label stacked>Email</ion-label>
+        <ion-input type="text" [(ngModel)]="userData.email"></ion-input>
+      </ion-item>
+
+      <button ion-button full color="success" (click)="update()">แก้ไขข้อมูล</button>
+    </ion-list>
+</ion-content>

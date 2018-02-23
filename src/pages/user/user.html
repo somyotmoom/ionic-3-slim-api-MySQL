@@ -1,0 +1,30 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>สมาชิกทั้งหมด</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+    <ion-list *ngFor="let item of dataSet">
+        <ion-item-sliding>
+          <ion-item>
+            <h2>{{item.name}}</h2>
+            <p>{{item.email}}</p>
+          </ion-item>
+          <ion-item-options side="right">
+            <button ion-button color="primary" (click)="userUpdate(item.user_id)">
+              <ion-icon name="edit"></ion-icon>
+              แก้ไข
+            </button>
+            <button ion-button color="danger" (click)="userDelete(item.user_id)">
+              <ion-icon name="delete"></ion-icon>
+              ลบ
+              </button>
+          </ion-item-options>
+        </ion-item-sliding>
+      </ion-list>
+
+</ion-content>
